@@ -1,0 +1,78 @@
+.widget-container {
+  display: flex;
+  flex-wrap: wrap;
+  .widget {
+    position: relative;
+    min-width: 300px;
+    max-width: 500px;
+    height: 300px;
+    margin-right: 25px;
+    margin-top: 50px;
+    padding: 10px;
+    overflow-y: scroll;
+    box-shadow: 5px 5px 5px 5px $box--shadow--gray;
+    table {
+      th, td {
+        width: 130px;
+        text-align: left;
+        height: 20px;
+      }
+    }
+    .trip-info {
+      width: auto;
+      margin-top: 20px;
+      .trip-id {
+        font-weight: bold;
+        padding: 10px 0px;
+        .edit-expense {
+          margin-left: 10px;
+        }
+      }
+      .trip-expenses {
+        display: flex;
+        flex-wrap: wrap;
+        div {
+          margin-right: 10px;
+        }
+        .expense-entry {
+          .expense-amount {
+            margin: 5px;
+            width:100px;
+          }
+          input[type=submit], button {
+            margin: 5px;
+          }
+        }
+      }
+    }
+    .widget-summary-wrapper {
+      width: 170px;
+      height: 100px;
+      margin: 50px 50px 95px 67px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      .widget-label {
+        font-size: $widget--summary--label;
+        font-weight: bold;
+      }
+      .widget-value {
+        font-size: $widget--summary--value;
+      }
+    }
+    .trip-details {
+      margin-top: 25px;
+      table tr {
+        td.table-key {
+          font-weight: bold;
+          width: 120px;
+          height: 50px;
+        }
+        td.table-value {
+          width: auto
+        }
+      }
+    }
+  }
+}

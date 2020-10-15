@@ -1,0 +1,77 @@
+{
+  "name": "intuit-craft-demo",
+  "version": "1.0.0",
+  "description": "Intuit Craft Demo",
+  "engines": {
+    "node": ">=10.x"
+  },
+  "modern": ".build/modern/index.html",
+  "legacy": ".build/legacy/index.html",
+  "targets": {
+    "modern": {
+      "engines": {
+        "browsers": "> 0.5%"
+      },
+      "distDir": ".build/modern"
+    },
+    "legacy": {
+      "engines": {
+        "browsers": "ie 11"
+      },
+      "distDir": ".build/legacy"
+    }
+  },
+  "includeNodeModules": false,
+  "outputFormat": "global",
+  "isLibrary": false,
+  "private": true,
+  "browserslist": [
+    "> 0.5%",
+    "not ie 11"
+  ],
+  "scripts": {
+    "browsers": "npx browserslist",
+    "clean": "rm -rf .build",
+    "start": "parcel serve client/index.html --open --no-cache",
+    "start:server": "babel-watch -e [.mjs] server/craft-demo.mjs",
+    "build": "parcel build client/index.html",
+    "lint": "eslint client/ --ext .js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/venikanya/intuit-craft-demo.git"
+  },
+  "author": "venikanya",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/venikanya/intuit-craft-demo/issues"
+  },
+  "homepage": "https://github.com/venikanya/intuit-craft-demo#readme",
+  "dependencies": {
+    "cross-fetch": "^3.0.6",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-0",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.10.4",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.3.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-watch": "^7.0.0",
+    "cors": "^2.8.5",
+    "eslint": "^7.11.0",
+    "eslint-plugin-react": "^7.21.4",
+    "express": "^4.17.1",
+    "jest": "^26.4.2",
+    "parcel": "^2.0.0-beta.1",
+    "sass": "^1.27.0"
+  }
+}

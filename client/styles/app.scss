@@ -1,0 +1,23 @@
+@import 'variables';
+@import 'custom/content';
+@import 'custom/loader';
+@import 'custom/error';
+
+.app {
+  font-family: $text--font;
+  padding: 20px;
+  height: 100%;
+  .header {
+    height: 30px;
+    background: $brand--blue--light;
+    padding: 15px;
+    color: $text--dark;
+    font-size: $app--header--text;
+  }
+
+  .content {
+    background-color: $bg--light;
+    padding: 20px 40px;
+    height: 100%;
+  }
+}
