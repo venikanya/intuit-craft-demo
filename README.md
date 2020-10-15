@@ -10,7 +10,7 @@ To run the project:
 ```
 yarn install
 
-yarn start:Server
+yarn start:server
 
 yarn start
 
